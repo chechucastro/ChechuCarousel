@@ -10,7 +10,3 @@ autoplay 								 Default : true 				Type : Boolean
 duration                                 Default : 4000                 Type : Number
 pagination                               Default : true                 Type : Boolean
 arrows                                   Default : true                 Type : Boolean
-
-TODOLIST (future version) :
-
-- Change slide position by clicking dots elements...
