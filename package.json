@@ -1,0 +1,13 @@
+{
+  "name": "ChechuCarousel",
+  "version": "1.0.1",
+  "dependencies": {
+    "grunt": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-newer": "latest"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^0.3.0"
+  }
+}
