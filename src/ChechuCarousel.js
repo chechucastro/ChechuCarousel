@@ -44,10 +44,8 @@
                     var imgWidth = t.$imgWidth.width();
                     // Animated movement
                     t.$Li.parent().css(""+Prefixes()+"", "translate(-" + imgWidth * currentIndex + "px,0px)");
-
                     // Move dots [0 0 0 ]
                     $('.pagination li').removeClass(t.$selectedOn).eq(currentIndex).addClass(t.$selectedOn);
-
                 };
                 var CreateDots = function(){
                     var $where = t.$InnerContent.next(),
