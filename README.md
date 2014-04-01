@@ -10,3 +10,8 @@ autoplay 								 Default : true 				Type : Boolean
 duration                                 Default : 4000                 Type : Number
 pagination                               Default : true                 Type : Boolean
 arrows                                   Default : true                 Type : Boolean
+
+
+TODOLIST :
+
+- Better example page with a few carousels on it
