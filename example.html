@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link type="text/css" rel="stylesheet" media="all" href="./css/style.css">
+</head>
+<body>
+  <section id="js">
+    <p>Carousel with default parameters:</p>
+    <p>Example with arrows only.</p>
+    <div id="homeCarousel">
+      <div id="homeCarouselInner" class="carousel-window">
+        <ul>
+         <li>
+           <a href="#">
+            <img src="http://dummyimage.com/915x400/000/fff.gif&text=IMAGE+1" alt="placeholder+image">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="http://dummyimage.com/915x400/ab09ab/ffffff.gif&text=IMAGE+2" alt="placeholder+image">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="http://dummyimage.com/915x400/2734c2/ffffff.gif&text=IMAGE+3" alt="placeholder+image">
+          </a>
+        </li>
+      </ul>
+      <div id="loading">
+        <img src="./img/loader.gif">
+      </div>
+      <div class="arrowLeft"><</div>
+      <div class="arrowRight">></div>
+    </div>
+    <div class="pagination"><!-- Pager dots [0 0 0] --></div>
+  </div>
+  <p>Carousel with custom parameters:</p>
+<p>Example with autoplay,pagination dots,arrows and time between images of 4000 millisecons (4 secs)</p>
+  <div id="homeCarousel_two">
+    <div id="homeCarouselInner" class="carousel-window">
+      <ul>
+       <li>
+         <a href="#">
+          <img src="http://dummyimage.com/915x400/000/fff.gif&text=IMAGE+1" alt="placeholder+image">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="http://dummyimage.com/915x400/ab09ab/ffffff.gif&text=IMAGE+2" alt="placeholder+image">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="http://dummyimage.com/915x400/2734c2/ffffff.gif&text=IMAGE+3" alt="placeholder+image">
+        </a>
+      </li>
+    </ul>
+    <div id="loading">
+      <img src="./img/loader.gif">
+    </div>
+    <div class="arrowLeft"><</div>
+    <div class="arrowRight">></div>
+  </div>
+  <div class="pagination"><!-- Pager dots [0 0 0] --></div>
+</div>
+</section>
+<script src="libs/zepto/zepto.min.js"></script>
+<script src="libs/zepto/zepto.touch.js"></script>
+<script src="src/ChechuCarousel.js"></script>
+<script>
+  $(document).ready(function() {
+  /* Posible params here:
+    - autoplay : boolean (true)
+    - pagination: boolean (true)
+    - arrows: boolean (true)
+    - duration: time (millisecons)
+  */
+  // Calling plugin without parameters
+  $('#homeCarousel').ChechuCarousel({arrows:true});
+  $('#homeCarousel_two').ChechuCarousel({autoplay:true,pagination:true,arrows:true,duration:4000});
+});
+</script>
+</body>
+</html>

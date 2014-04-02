@@ -1,0 +1,102 @@
+html, body
+  height 100%
+  width 100%
+.carousel-window
+  position relative
+  overflow hidden
+  margin 0 auto
+  width 915px
+  height 400px
+
+  ul
+    margin 0
+    padding 0
+    list-style none
+    position absolute
+    width 2751px
+    -webkit-transition -webkit-transform 1s ease-in-out
+    -moz-transition -moz-transform 1s ease-in-out
+    -ms-transition -ms-transform 1s ease-in-out
+    -o-transition -o-transform 1s ease-in-out
+    transition transform 1s ease-in-out
+
+  li
+    margin 0
+    padding 0
+    float left
+    a
+      img
+        height 100%
+        width 100%
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+  position relative
+  padding 0
+  background #fff
+
+.arrowLeft,
+.arrowRight
+  font-size 25px
+  color #fff
+  margin-left 0px
+  position relative
+  top 37%
+  padding 13px
+  background-color #000
+  cursor pointer
+  display none;
+
+.arrowLeft
+  float left
+
+.arrowRight
+  float right
+
+.pagination
+  ul
+    position static
+    margin 0
+    padding 5px
+    text-align center
+    list-style none
+  li
+    position static
+    float none
+    display inline
+    margin 0 10px
+    padding 0
+    width auto
+    height auto
+    background none
+  a
+    display inline-block
+    padding 0
+    outline 0
+    width 10px
+    height 10px
+    text-decoration none
+    text-indent -10000px
+    cursor pointer
+    span
+      width 25px
+      height 25px
+      border-radius 50%
+      background-color #ccc
+      display block
+  .on
+    a
+      cursor default
+    span
+      width 25px
+      height 25px
+      border-radius 50%
+      background-color #000
+      display block
+#loading
+  position: absolute
+  left: 43%;
+  top: 36%;
+  display none
+
