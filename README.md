@@ -12,6 +12,6 @@ pagination                               Default : true                 Type : B
 arrows                                   Default : true                 Type : Boolean
 
 
-TODOLIST :
+TODOLIST (Next version) :
 
-- Better example page with a few carousels on it
+- Animation speed: Transition time between each movement. (Transition speed in milliseconds: Default is "1s ease-in-out")

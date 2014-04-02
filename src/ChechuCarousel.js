@@ -13,7 +13,7 @@
         this.$showArrows        = this.options.arrows       || false;
         this.$autoPlayDuration  = this.options.duration     || 4000;
 
-      // Dom elements
+        // Dom elements
         this.$element           = $(element); // Main object  $('#homeCarousel')
         this.$InnerContent      = this.$element.children().first();
         this.$arrowRight        = this.$InnerContent.find('.arrowRight');
@@ -64,7 +64,7 @@
             $ul = $('<ul/>').appendTo($where),
             $html = '';
           for (var i = 0; i < t.$imgWidth.length; i++) {
-            $html += '<li><a href="#"><span>' + i + '</span></a></li>';
+            $html += '<li><a><span>' + i + '</span></a></li>';
           }
           // Append to "ul" and add class "on" to the first "li" element
           $ul.html($html).find('li').first().addClass('on');
@@ -92,7 +92,7 @@
             }, t.$autoPlayDuration);
 
             // Stop autoplay if any navigation part is clicked
-            t.$arrowRight.add(t.$arrowLeft).add(t.$Li).bind('click swipeRight swipeLeft', function () {
+            t.$arrowRight.add(t.$arrowLeft).add(t.$Li).add(t.$dots).bind('click swipeRight swipeLeft', function () {
               clearInterval(move);
             });
           }
