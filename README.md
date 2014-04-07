@@ -1,4 +1,4 @@
-ChechuAccordion
+ChechuCarousel
 ================================
 
 **Zepto or jQuery Plugin: ChechuCarousel offers and easy way of displaying html or images with nice css transitions**
