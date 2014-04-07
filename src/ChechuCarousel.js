@@ -12,6 +12,7 @@
             arrows    : true,
             duration  : true
         };
+
       // Plugin parameters
         this.options            = $.extend({},defaults, options);
         this.$autoplay          = this.options.autoplay     || false;
