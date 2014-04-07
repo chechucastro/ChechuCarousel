@@ -6,8 +6,14 @@
      * @param (object) options - A list of options for the plugin
      */
     $[pluginName] = function (element, options) {
+        var defaults = {
+            autoplay  : false,
+            pagination: true,
+            arrows    : true,
+            duration  : true
+        };
       // Plugin parameters
-        this.options            = $.extend({}, options);
+        this.options            = $.extend({},defaults, options);
         this.$autoplay          = this.options.autoplay     || false;
         this.$paginationDots    = this.options.pagination   || false;
         this.$showArrows        = this.options.arrows       || false;
