@@ -6,37 +6,31 @@
   <link type="text/css" rel="stylesheet" media="all" href="./css/style.css">
 </head>
 <body>
-  <section id="js">
-    <p>Example with arrows only.</p>
-    <div id="homeCarousel">
-      <div id="homeCarouselInner" class="carousel-window">
-        <ul>
-         <li>
-           <a href="#">
-            <img src="http://dummyimage.com/915x400/000/fff.gif&text=IMAGE+1" alt="placeholder+image">
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="http://dummyimage.com/915x400/ab09ab/ffffff.gif&text=IMAGE+2" alt="placeholder+image">
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="http://dummyimage.com/915x400/2734c2/ffffff.gif&text=IMAGE+3" alt="placeholder+image">
-          </a>
-        </li>
-      </ul>
-      <div id="loading">
-        <img src="./img/loader.gif">
-      </div>
-      <div class="arrowLeft"><</div>
-      <div class="arrowRight">></div>
-    </div>
-    <div class="pagination"><!-- Pager dots [0 0 0] --></div>
-  </div>
-<p>Example with autoplay,pagination dots,arrows and time between images of 4000 millisecons (4 secs)</p>
-  <div id="homeCarousel_two">
+  <h1 id="chechuaccordion-responsive-design">ChechuAccordion [Responsive design]</h1>
+
+  <p><strong>Zepto or jQuery Plugin: ChechuCarousel offers and easy way of displaying html or images with nice css transitions</strong></p><div class="se-section-delimiter"></div>
+
+  <h2 id="options">Options :</h2>
+  <pre class="prettyprint prettyprinted">
+  <code>
+  <span class="pln">
+    autoplay                    </span><span class="typ">Default</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">              </span><span class="typ">Type</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Boolean</span><span class="pln">
+    duration                    </span><span class="typ">Default</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="lit">4000</span><span class="pln">              </span><span class="typ">Type</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Number</span><span class="pln">
+    pagination                  </span><span class="typ">Default</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">              </span><span class="typ">Type</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Boolean</span><span class="pln">
+    arrows                      </span><span class="typ">Default</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">              </span><span class="typ">Type</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Boolean</span></code></pre>
+
+    <h2 id="javascript-plugin-call">JavaScript (Plugin call) :</h2>
+
+    <pre class="prettyprint prettyprinted"><code><span class="pln"> </span><span class="com">&lt;!-- First Carousel --&gt;</span><span class="pln">
+     $('#homeCarousel').ChechuCarousel({arrows:true});
+   </span><span class="com">&lt;!-- Second Carousel --&gt;</span><span class="pln">
+   $('#homeCarousel_two').ChechuCarousel(
+   {autoplay:true,pagination:true,arrows:true,duration:3000}
+   );</span></code></pre>
+<section id="js">
+  <p>RESPONSIVE DESIGN IMAGE CAROUSEL SLIDER</p>
+  <p>Example with arrows only.</p>
+  <div id="homeCarousel">
     <div id="homeCarouselInner" class="carousel-window">
       <ul>
        <li>
@@ -62,6 +56,34 @@
     <div class="arrowRight">></div>
   </div>
   <div class="pagination"><!-- Pager dots [0 0 0] --></div>
+</div>
+<p>Example with autoplay,pagination dots,arrows and time between images of 4000 millisecons (4 secs)</p>
+<div id="homeCarousel_two">
+  <div id="homeCarouselInner" class="carousel-window">
+    <ul>
+     <li>
+       <a href="#">
+        <img src="http://dummyimage.com/915x400/000/fff.gif&text=IMAGE+1" alt="placeholder+image">
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="http://dummyimage.com/915x400/ab09ab/ffffff.gif&text=IMAGE+2" alt="placeholder+image">
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="http://dummyimage.com/915x400/2734c2/ffffff.gif&text=IMAGE+3" alt="placeholder+image">
+      </a>
+    </li>
+  </ul>
+  <div id="loading">
+    <img src="./img/loader.gif">
+  </div>
+  <div class="arrowLeft"><</div>
+  <div class="arrowRight">></div>
+</div>
+<div class="pagination"><!-- Pager dots [0 0 0] --></div>
 </div>
 </section>
 <script src="libs/zepto/zepto.min.js"></script>

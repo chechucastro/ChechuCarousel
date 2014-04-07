@@ -31,6 +31,12 @@
         this.$imgWidth          = this.$Li.find('img');
         this.$max               = this.$Li.length - 1;
 
+        // Set responsive dimensions
+        this.$ulWidth           = this.$InnerContent.find('ul').css('width',parseInt(this.$Li.length *100)+'%');
+        this.$imgLiWidth        = this.$Li.css('width',(100 / this.$Li.length)+'%');
+        this.$CarouselWindow    = this.$InnerContent.css('height',this.$imgWidth.width()/3 +'px');
+        this.$setArrows         = this.$arrowRight.add(this.$arrowLeft).css('top',$(window).width() / (this.$Li.length * 2)+'px');
+
       // init plugin
       return this.Carousel();
     };

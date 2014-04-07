@@ -1,19 +1,21 @@
 html, body
   height 100%
   width 100%
+#homeCarouselInner
+  width 100%
 .carousel-window
   position relative
   overflow hidden
   margin 0 auto
-  width 915px
-  height 400px
+  width 300%
+  min-height 250px
 
   ul
     margin 0
     padding 0
     list-style none
     position absolute
-    width 2751px
+    /* width xxx%  is written dinamically with JavaScript */
     -webkit-transition -webkit-transform 1s ease-in-out
     -moz-transition -moz-transform 1s ease-in-out
     -ms-transition -ms-transform 1s ease-in-out
@@ -24,14 +26,13 @@ html, body
     margin 0
     padding 0
     float left
+
     a
       img
         height 100%
         width 100%
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+        -webkit-background-size cover
+        background-size cover
   position relative
   padding 0
   background #fff
