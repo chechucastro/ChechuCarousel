@@ -3,7 +3,7 @@ ChechuCarousel [Responsive design]
 
 **Zepto or jQuery Plugin: ChechuCarousel offers and easy way of displaying html or images with nice css transitions**
 
-Try ChechuCarousel here : http://digitatis.com/codecanyon/ChechuCarousel/example.html
+You can try "ChechuCarousel" here : http://digitatis.com/codecanyon/ChechuCarousel/example.html
 
 Options :
 ---------
@@ -59,3 +59,9 @@ Basic html usage:
 
 
   [1]: http://www.digitatis.com/imagenes/carousel.jpg
+
+
+Contact me :
+---------
+E-mail : chechu[at]digitatis.com
+Twitter: nexus5_com_es
