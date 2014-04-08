@@ -45,15 +45,32 @@ html, body
   position relative
   top 37%
   padding 13px
-  background-color #000
   cursor pointer
-  display none;
-
+  display none
+  background #45484d
+  background -moz-linear-gradient(left,  #45484d 0%, #000000 100%)
+  background -webkit-gradient(linear, left top, right top, color-stop(0%,#45484d), color-stop(100%,#000000))
+  background -webkit-linear-gradient(left,  #45484d 0%,#000000 100%)
+  background -o-linear-gradient(left,  #45484d 0%,#000000 100%)
+  background -ms-linear-gradient(left,  #45484d 0%,#000000 100%)
+  background linear-gradient(to right,  #45484d 0%,#000000 100%)
 .arrowLeft
   float left
+  -webkit-border-top-right-radius 4px
+  -webkit-border-bottom-right-radius 4px
+  -moz-border-radius-topright 4px
+  -moz-border-radius-bottomright 4px
+  border-top-right-radius 4px
+  border-bottom-right-radius 4px
 
 .arrowRight
   float right
+  -webkit-border-top-left-radius 4px
+  -webkit-border-bottom-left-radius 4px
+  -moz-border-radius-topleft 4px
+  -moz-border-radius-bottomleft 4px
+  border-top-left-radius 4px
+  border-bottom-left-radius 4px
 
 .pagination
   ul
@@ -93,8 +110,14 @@ html, body
       width 25px
       height 25px
       border-radius 50%
-      background-color #000
       display block
+      background #45484d
+      background -moz-linear-gradient(left,  #45484d 0%, #000000 100%)
+      background -webkit-gradient(linear, left top, right top, color-stop(0%,#45484d), color-stop(100%,#000000))
+      background -webkit-linear-gradient(left,  #45484d 0%,#000000 100%)
+      background -o-linear-gradient(left,  #45484d 0%,#000000 100%)
+      background -ms-linear-gradient(left,  #45484d 0%,#000000 100%)
+      background linear-gradient(to right,  #45484d 0%,#000000 100%)
 #loading
   position: absolute
   left: 43%;
