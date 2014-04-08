@@ -43,6 +43,8 @@
     $[pluginName].prototype = {
 
       Carousel: function () {
+        // Fix: event (touchmove) is executed after the touchstart event end before touchend event in some devices...
+        document.addEventListener('touchmove', function (e) {e.preventDefault();}, false);
         var t = this,
           currentIndex = t.$Li.index();
         // Go Forward
