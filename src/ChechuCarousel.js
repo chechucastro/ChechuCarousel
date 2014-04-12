@@ -7,18 +7,20 @@
      */
     $[pluginName] = function (element, options) {
         var defaults = {
-            autoplay  : false,
-            pagination: true,
-            arrows    : true,
-            duration  : true
+            autoplay    : false,
+            pagination  : true,
+            arrows      : true,
+            duration    : true,
+            orientation : 'horizontal'
         };
 
       // Plugin parameters
         this.options            = $.extend({},defaults, options);
-        this.$autoplay          = this.options.autoplay     || false;
-        this.$paginationDots    = this.options.pagination   || false;
-        this.$showArrows        = this.options.arrows       || false;
-        this.$autoPlayDuration  = this.options.duration     || 4000;
+        this.$autoplay          = this.options.autoplay;
+        this.$paginationDots    = this.options.pagination;
+        this.$showArrows        = this.options.arrows;
+        this.$autoPlayDuration  = this.options.duration;
+        this.$orientation       = this.options.orientation;
 
         // Dom elements
         this.$element           = $(element); // Main object  $('#homeCarousel')
@@ -28,14 +30,8 @@
         this.$Li                = this.$InnerContent.find('li');
         this.$dots              = this.$element.children().next();
         this.$selectedOn        = 'on';
-        this.$imgWidth          = this.$Li.find('img');
+        this.$img               = this.$Li.find('img');
         this.$max               = this.$Li.length - 1;
-
-        // Set responsive dimensions
-        this.$ulWidth           = this.$InnerContent.find('ul').css('width',parseInt(this.$Li.length *100)+'%');
-        this.$imgLiWidth        = this.$Li.css('width',(100 / this.$Li.length)+'%');
-        this.$CarouselWindow    = this.$InnerContent.css('height',this.$imgWidth.width()/3 +'px');
-        this.$setArrows         = this.$arrowRight.add(this.$arrowLeft).css('top',$(window).width() / (this.$Li.length * 2)+'px');
 
       // init plugin
       return this.Carousel();
@@ -59,9 +55,12 @@
         };
         // Move to right or left directions.
         var MoveTo = function (currentIndex) {
-          var imgWidth = t.$imgWidth.width();
-          // Animated movement
-          t.$Li.parent().css("" + Prefixes() + "", "translate(-" + imgWidth * currentIndex + "px,0px)");
+          var imgWidth = t.$img.width();
+          var imgHeight= t.$img.height();
+
+          // Animated movement orientations
+          (t.$orientation =='horizontal') ? t.$Li.parent().css("" + Prefixes() + "", "translate(-" + imgWidth * currentIndex + "px,0px)") : t.$Li.parent().css("" + Prefixes() + "", "translate(0px,-" + imgHeight * currentIndex+"px)");
+
           // Moving dots [0 0 0 ]
           t.$dots.find('li').removeClass(t.$selectedOn).eq(currentIndex).addClass(t.$selectedOn);
           // Deal with arrows
@@ -78,7 +77,7 @@
           var $where = t.$InnerContent.next(),
             $ul = $('<ul/>').appendTo($where),
             $html = '';
-          for (var i = 0; i < t.$imgWidth.length; i++) {
+          for (var i = 0; i < t.$img.length; i++) {
             $html += '<li><a><span>' + i + '</span></a></li>';
           }
           // Append to "ul" and add class "on" to the first "li" element
@@ -112,6 +111,21 @@
             });
           }
         };
+        var responsive = function(){
+            // Set responsive dimensions
+            if(t.$orientation =='horizontal'){
+              t.$InnerContent.find('ul').css('width',parseInt(t.$Li.length * 100)+'%');
+              t.$Li.css('width',(100 / t.$Li.length)+'%');
+              t.$InnerContent.css('height',t.$img.width()/3 +'px');
+              t.$arrowRight.add(t.$arrowLeft).css('top',$(window).width() / (t.$Li.length * 2)+'px');
+
+            }else{
+              t.$InnerContent.find('ul').css('width','100%');
+              t.$Li.css('width','100%');
+              t.$InnerContent.css('height',t.$img.width()/3 +'px');
+            }
+        };
+
         // Click & Swipe events....
         this.$arrowRight.add(this.$Li).on('click swipeRight', function () {
           Next();
@@ -122,7 +136,8 @@
         // Display or not conditions
         var autoplay   = (this.$autoplay) ? autoplay() : autoplay,
             CreateDots = (this.$paginationDots) ? CreateDots() : CreateDots,
-            ShowArrows = (this.$showArrows) ? t.$arrowRight.add(t.$arrowLeft).show() : '';
+            ShowArrows = (this.$showArrows) ? t.$arrowRight.add(t.$arrowLeft).show() : '',
+            responsive = (this.$orientation) ? responsive() : responsive;
       }
     };
     // Building the plugin

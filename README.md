@@ -5,14 +5,13 @@ ChechuCarousel [Responsive design]
 
 You can try "ChechuCarousel" here : http://digitatis.com/codecanyon/ChechuCarousel/example.html
 
-Options :
+Options : ( Swipe events added for mobile use )
 ---------
-```
 autoplay                    Default : true              Type : Boolean
 duration                    Default : 4000              Type : Number
 pagination                  Default : true              Type : Boolean
 arrows                      Default : true              Type : Boolean
-```
+
 JavaScript (Plugin call) :
 ---------
 
