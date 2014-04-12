@@ -1,27 +1,39 @@
 ChechuCarousel [Responsive design]
 ================================
 
-**Zepto or jQuery Plugin: ChechuCarousel offers and easy way of displaying html or images with nice css transitions**
+**Zepto or jQuery Plugin: ChechuCarousel offers and easy way of displaying html or images with nice css transitions.  ( Swipe events added for mobile use too!! )**
 
 You can try "ChechuCarousel" here : http://digitatis.com/codecanyon/ChechuCarousel/example.html
 
-Options : ( Swipe events added for mobile use )
+Plugin Options :
 ---------
-autoplay                    Default : true              Type : Boolean
-duration                    Default : 4000              Type : Number
-pagination                  Default : true              Type : Boolean
-arrows                      Default : true              Type : Boolean
 
-JavaScript (Plugin call) :
+    - autoplay                    Default : true              Type : Boolean
+    - duration                    Default : 4000              Type : Number
+    - pagination                  Default : true              Type : Boolean
+    - arrows                      Default : true              Type : Boolean
+    - orientation                 Default : 'horizontal'      Type : String
+
+JavaScript: (Plugin call examples) :
 ---------
 
 ```
- <!-- First Carousel -->
- $('#homeCarousel').ChechuCarousel({arrows:true});
- <!-- Second Carousel -->
- $('#homeCarousel_two').ChechuCarousel(
-    {autoplay:true,pagination:true,arrows:true,duration:3000}
- );
+    <script>
+        $(document).ready(function () {
+            // Calling plugin with parameters
+            $('#homeCarousel').ChechuCarousel({
+                arrows: true,
+                orientation: 'horizontal'
+            });
+            $('#homeCarousel_two').ChechuCarousel({
+                autoplay: true,
+                pagination: true,
+                arrows: true,
+                duration: 3000,
+                orientation: 'vertical'
+            });
+        });
+    </script>
 ```
 Basic html usage:
 ---------
