@@ -13,6 +13,11 @@ Plugin Options :
     - pagination                  Default : true              Type : Boolean
     - arrows                      Default : true              Type : Boolean
     - orientation                 Default : 'horizontal'      Type : String
+    
+    TODO: 
+    - Small time bar to display the time left before finding the next image
+    - Play/Pause buttons
+    
 
 JavaScript: (Plugin call examples) :
 ---------
