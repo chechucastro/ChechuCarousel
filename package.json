@@ -8,6 +8,8 @@
     "grunt-newer": "latest"
   },
   "devDependencies": {
-    "grunt-contrib-concat": "^0.3.0"
+    "grunt-contrib-concat": "^0.3.0",
+    "grunt-jsbeautifier": "^0.2.7",
+    "grunt-browser-sync": "^0.8.2"
   }
 }

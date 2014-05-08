@@ -2,7 +2,7 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     project: {
-      name: "ChechuCarousel"
+      name: "ChechuFormValidator"
     },
     uglify: {
       def: {
@@ -18,17 +18,36 @@ module.exports = function (grunt) {
     stylus: {
       dist: {
         options: {
-          style: 'compressed'
+          compress: false // Don't forget to change this to TRUE before the last upload
         },
         files: {
           'css/style.css': 'styl/style.styl'
         }
       }
     },
+    jsbeautifier : {
+      files : ["src/*.js"]
+    },
+    browserSync: {
+        dev: {
+            bsFiles: {
+                 src : [
+                  'css/*.css',
+                  'styl/*.styl',
+                  'img/*',
+                  'src/*.js',
+                  '**/*.html'
+                ]
+            },
+            options: {
+                watchTask: true
+            }
+        }
+    },
     watch: {
       def: {
         files: ['src/*.js', 'styl/*.styl'],
-        tasks: ['newer:uglify', 'stylus']
+        tasks: ['newer:uglify', 'stylus','jsbeautifier']
       }
     }
   });
@@ -37,6 +56,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-stylus');
+  grunt.loadNpmTasks('grunt-jsbeautifier');
+  grunt.loadNpmTasks('grunt-browser-sync');
   // Calling...
-  grunt.registerTask('default', ['watch:def']);
+  grunt.registerTask('default', ['browserSync','watch:def']);
 };
