@@ -7,31 +7,31 @@
          */
         $[pluginName] = function(element, options) {
             var defaults = {
-                autoplay: false,
-                pagination: true,
-                arrows: true,
-                duration: true,
-                orientation: 'horizontal'
+                autoplay:       false,
+                pagination:     true,
+                arrows:         true,
+                duration:       true,
+                orientation:    'horizontal'
             };
 
             // Plugin parameters
-            this.options = $.extend({}, defaults, options);
-            this.$autoplay = this.options.autoplay;
-            this.$paginationDots = this.options.pagination;
-            this.$showArrows = this.options.arrows;
-            this.$autoPlayDuration = this.options.duration;
-            this.$orientation = this.options.orientation;
+            this.options            = $.extend({}, defaults, options);
+            this.$autoplay          = this.options.autoplay;
+            this.$paginationDots    = this.options.pagination;
+            this.$showArrows        = this.options.arrows;
+            this.$autoPlayDuration  = this.options.duration;
+            this.$orientation       = this.options.orientation;
 
             // Dom elements
-            this.$element = $(element); // Main object  $('#homeCarousel')
-            this.$InnerContent = this.$element.children().first();
-            this.$arrowRight = this.$InnerContent.find('.arrowRight');
-            this.$arrowLeft = this.$InnerContent.find('.arrowLeft');
-            this.$Li = this.$InnerContent.find('li');
-            this.$dots = this.$element.children().next();
-            this.$selectedOn = 'on';
-            this.$img = this.$Li.find('img');
-            this.$max = this.$Li.length - 1;
+            this.$element           = $(element); // Main object  $('#homeCarousel')
+            this.$InnerContent      = this.$element.children().first();
+            this.$arrowRight        = this.$InnerContent.find('.arrowRight');
+            this.$arrowLeft         = this.$InnerContent.find('.arrowLeft');
+            this.$Li                = this.$InnerContent.find('li');
+            this.$dots              = this.$element.children().next();
+            this.$selectedOn        = 'on';
+            this.$img               = this.$Li.find('img');
+            this.$max               = this.$Li.length - 1;
 
             // init plugin
             return this.Carousel();
@@ -136,10 +136,10 @@
                     Prev();
                 });
                 // Display or not conditions
-                var autoplay = (this.$autoplay) ? autoplay() : autoplay,
-                    CreateDots = (this.$paginationDots) ? CreateDots() : CreateDots,
-                    ShowArrows = (this.$showArrows) ? t.$arrowRight.add(t.$arrowLeft).show() : '',
-                    responsive = (this.$orientation) ? responsive() : responsive;
+                var autoplay        = (this.$autoplay) ? autoplay() : autoplay,
+                    CreateDots      = (this.$paginationDots) ? CreateDots() : CreateDots,
+                    ShowArrows      = (this.$showArrows) ? t.$arrowRight.add(t.$arrowLeft).show() : '',
+                    responsive      = (this.$orientation) ? responsive() : responsive;
             }
         };
         // Building the plugin
